@@ -11,6 +11,7 @@ export class LiveListComponent implements OnInit {
 
   // Armazenar as lives que já aconteceram
   livesPrevious: Live[] = [];
+  livesNext: Live[] = [];
 
   constructor(public liveService: LiveService) { }
 
@@ -23,7 +24,12 @@ export class LiveListComponent implements OnInit {
     this.liveService.getLivesWithFlag('previous').subscribe((data) => {
       this.livesPrevious = data.content;
     })
+
+    this.liveService.getLivesWithFlag('next').subscribe((data) => {
+      this.livesNext = data.content;
+    })
   }
+  
   
   
 }
