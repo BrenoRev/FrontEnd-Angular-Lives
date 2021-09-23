@@ -8,14 +8,16 @@
                       <p>
                         <span id="font">{{live.liveName}}</span>
                         <span ></span>
-                        <span id="font">{{live.liveDate}}</span>
+                        <span id="font" class="float">{{live.liveDate | localDateTime}}</span>
                       </p>
                       <p id="font">
                         Canal: <span>{{live.channelName}}</span>
                       </p>
                     </div>
                   </mat-card-title>
-                 
+                    <div>
+                      <iframe width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   </div>
                   <mat-card-content>
                     <p>
                       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -37,21 +39,22 @@
           <mat-card-title class="mat-card-title-live">
             <div class="row">
               <p>
-                <span>{{live.liveName}}</span>
+                <span id="font">{{live.liveName}}</span>
                 <span></span>
-                <span style="float:right">{{live.liveDate}}</span>
+                <span id="font" class="float">{{live.liveDate | localDateTime}}</span>
               </p>
-              <p>
+              <p id="font">
                 Canal: <span>{{live.channelName}}</span>
               </p>
             </div>
           </mat-card-title>
               <mat-card-content>
-                <p>
-                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                  bred for hunting.
-                </p>
+                <div>
+                  <iframe width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <p>
+
+               </p>
               </mat-card-content>
             </mat-card>
           </ng-container>
