@@ -1,6 +1,9 @@
 <mat-tab-group id="mat-tab-group">
   <mat-tab label="Proximas"> 
-      <div id="fxlayout">
+    <br>
+    <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+    <br>
+      <div *ngIf="next" id="fxlayout">
           <ng-container *ngFor="let live of livesNext">
               <mat-card class="example-card mat-card-live tamanho">
                   <mat-card-title class="mat-card-title-live">
@@ -26,7 +29,10 @@
 
 
   <mat-tab label="Realizadas">
-    <div id="fxlayout">
+    <br>
+    <mat-progress-bar *ngIf="!next" mode="indeterminate"></mat-progress-bar>
+    <br>
+    <div *ngIf="previous" id="fxlayout">
       <ng-container *ngFor="let live of livesPrevious">
         <mat-card class="example-card mat-card-live tamanho">
           <mat-card-title class="mat-card-title-live">

@@ -20,6 +20,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressBarModule
   ],
   providers: [
     LocalDateTimePipe
