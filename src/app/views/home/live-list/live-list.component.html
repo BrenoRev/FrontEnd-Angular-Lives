@@ -1,25 +1,60 @@
 <mat-tab-group id="mat-tab-group">
-    <mat-tab label="Proximas"> 
-        <div fxLayout="row" fxLayoutAlign="start center" id="fxlayout">
-            <div id="card">
-                <mat-card class="example-card"
-                fxFlex="0 1 calc(33.3% - 11px)"
-                fxFlex.lt-md="0 1 calc(50% - 11px)"
-                fxFlex.lt-sm="100%">
-                    <mat-card-header>
-
-                    </mat-card-header>
-                   
-                    <mat-card-content>
+  <mat-tab label="Proximas"> 
+      <div id="fxlayout">
+          <ng-container *ngFor="let live of livesNext">
+              <mat-card class="example-card mat-card-live">
+                  <mat-card-title class="mat-card-title-live">
+                    <div class="row">
                       <p>
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
+                        <span id="font">{{live.liveName}}</span>
+                        <span ></span>
+                        <span id="font">{{live.liveDate}}</span>
                       </p>
-                    </mat-card-content>
-                  </mat-card>
+                      <p id="font">
+                        Canal: <span>{{live.channelName}}</span>
+                      </p>
+                    </div>
+                  </mat-card-title>
+                 
+                  <mat-card-content>
+                    <p>
+                      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                      bred for hunting.
+                    </p>
+                  </mat-card-content>
+                </mat-card>
+              </ng-container>
+      </div>
+   </mat-tab>
+
+
+
+  <mat-tab label="Realizadas">
+    <div id="fxlayout">
+      <ng-container *ngFor="let live of livesPrevious">
+          <mat-card class="example-card mat-card-live">
+          <mat-card-title class="mat-card-title-live">
+            <div class="row">
+              <p>
+                <span>{{live.liveName}}</span>
+                <span></span>
+                <span style="float:right">{{live.liveDate}}</span>
+              </p>
+              <p>
+                Canal: <span>{{live.channelName}}</span>
+              </p>
             </div>
-        </div>
-     </mat-tab>
-    <mat-tab label="Realizadas"> Content 2 </mat-tab>
+          </mat-card-title>
+              <mat-card-content>
+                <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                  bred for hunting.
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </ng-container>
+  </div>
+  </mat-tab>
 </mat-tab-group>
