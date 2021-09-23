@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
@@ -10,21 +11,22 @@ import { LiveService } from 'src/app/shared/service/live.service';
 })
 export class LiveFormDialogComponent implements OnInit {
 
-  private rest: LiveService;
-  public liveForm: FormGroup;
+
+  public liveForm!: FormGroup;
 
   constructor(public dialogRef: MatDialogRef<LiveFormDialogComponent>,
-              public fb: FormBuilder) { }
+              public fb: FormBuilder,
+              public rest: LiveService) { }
 
   ngOnInit(): void {
     this.liveForm = this.fb.group({
       liveName: ['', [Validators.required]],
       channelName: ['', [Validators.required]],
-      liveDate: ['', [Validators.required]],
-      liveTime: ['', [Validators.required]],
+      liveDate: ['2020-08-01T20:00:00', [Validators.required]],
+      liveTime: ['2020-08-01T20:00:00', [Validators.required]],
       liveLink: ['', [Validators.required]],
       registrationDate: ['', [Validators.required]],
-      urlSafe: ['', [Validators.required]]
+      urlSafe: ['', [Validators.required]],
     })
   }
 
@@ -35,7 +37,7 @@ export class LiveFormDialogComponent implements OnInit {
 
   createLive(){
     // Faz um post passando os itens do formulario
-    this.rest.postLives(this.liveForm.value).subscribe(result => {});
+    this.rest.postLives(this.liveForm.value).subscribe();
     this.dialogRef.close();
     this.liveForm.reset();
   }
