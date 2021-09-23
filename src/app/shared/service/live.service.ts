@@ -10,7 +10,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 export class LiveService {
 
   // URL da api que vai acessar
-  apiUrl = 'http://api-lives-angular.herokuapp.com/api/v1/lives';
+  apiUrl = 'http://api-lives-angular.herokuapp.com/lives';
 
   // Declarando que é uma resposta do tipo json
   httpOptions = {
