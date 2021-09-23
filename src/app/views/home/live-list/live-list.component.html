@@ -2,7 +2,7 @@
   <mat-tab label="Proximas"> 
       <div id="fxlayout">
           <ng-container *ngFor="let live of livesNext">
-              <mat-card class="example-card mat-card-live">
+              <mat-card class="example-card mat-card-live tamanho">
                   <mat-card-title class="mat-card-title-live">
                     <div class="row">
                       <p>
@@ -16,7 +16,7 @@
                     </div>
                   </mat-card-title>
                     <div>
-                      <iframe width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe id="frame" width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                    </div>
                   <mat-card-content>
                     <p>
@@ -35,13 +35,15 @@
   <mat-tab label="Realizadas">
     <div id="fxlayout">
       <ng-container *ngFor="let live of livesPrevious">
-          <mat-card class="example-card mat-card-live">
+          <mat-card class="tamanho">
           <mat-card-title class="mat-card-title-live">
             <div class="row">
               <p>
                 <span id="font">{{live.liveName}}</span>
                 <span></span>
+                <mat-chip class="mat-chip-date">
                 <span id="font" class="float">{{live.liveDate | localDateTime}}</span>
+                </mat-chip>
               </p>
               <p id="font">
                 Canal: <span>{{live.channelName}}</span>
@@ -50,7 +52,7 @@
           </mat-card-title>
               <mat-card-content>
                 <div>
-                  <iframe width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe id="frame" width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
                <p>
 

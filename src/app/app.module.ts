@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [
     LocalDateTimePipe
