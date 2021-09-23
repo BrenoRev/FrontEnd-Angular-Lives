@@ -39,9 +39,9 @@
     float:right;
 }
 
-.mat-chip-date{
-    background-color: 90CAF9 !important;
-    color: black !important;
+.cor{
+    background-color: #90CAF9;
+    color: black;
 }
 
 .tamanho{
