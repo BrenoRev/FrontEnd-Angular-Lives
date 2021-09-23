@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class LiveFormDialogComponent implements OnInit {
 
-  private liveForm: FormGroup;
+  public liveForm: FormGroup;
   constructor(public dialogRef: MatDialogRef<LiveFormDialogComponent>,
               public fb: FormBuilder) { }
 
@@ -27,6 +27,10 @@ export class LiveFormDialogComponent implements OnInit {
 
   cancelar(): void {
     this.dialogRef.close();
+  }
+
+  createLive(){
+    
   }
 
 }

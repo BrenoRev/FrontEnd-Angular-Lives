@@ -15,8 +15,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
-import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,9 +40,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTabsModule,
     MatCardModule,
     MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule
-
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     LocalDateTimePipe
