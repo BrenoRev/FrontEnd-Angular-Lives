@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import * as moment from 'moment';
 import { Live } from 'src/app/shared/model/live.model';
 import { LiveService } from 'src/app/shared/service/live.service';
 
@@ -24,11 +25,9 @@ export class LiveFormDialogComponent implements OnInit {
      this.liveForm = this.fb.group({
       liveName: ['', [Validators.required]],
       channelName: ['', [Validators.required]],
-      liveDate: ['2020-08-01T20:00:00', [Validators.required]],
-      liveTime: ['2020-08-01T20:00:00', [Validators.required]],
+      liveDate: ['', [Validators.required]],
+      liveTime: ['', [Validators.required]],
       liveLink: ['', [Validators.required]],
-      registrationDate: ['', [Validators.required]],
-      urlSafe: ['', [Validators.required]],
     })
     
   }
@@ -39,11 +38,16 @@ export class LiveFormDialogComponent implements OnInit {
   }
 
   createLive(){
+    let newDate: moment.Moment = moment.utc(this.liveForm.value.liveDate).local();
+
+          // Manipulando a data passada no formulário
+    this.liveForm.value.liveDate = newDate.format("YYYY-MM-DD") + "T" + this.liveForm.value.liveTime;
+          // Manipulando o html do youtube
+    this.liveForm.value.liveLink = this.liveForm.controls.liveLink.value.replace('watch?v=','embed/');
+    console.log(this.liveForm.value)
     
-      // Manipulando o html do youtube
-    var link: string = this.liveForm.controls.liveLink.value.replace('watch?v=','embed/');
-    // Faz um post passando os itens do formulario
-    this.rest.postLives(this.liveForm.value, link).subscribe();
+    // Faz um post passando os itens do formulari
+    this.rest.postLives(this.liveForm.value).subscribe();
     this.dialogRef.close();
     this.liveForm.reset();
   }

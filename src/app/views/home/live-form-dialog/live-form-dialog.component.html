@@ -15,6 +15,26 @@
       <mat-label>Link Completo</mat-label>
       <input matInput formControlName="liveLink" name="liveLink">
     </mat-form-field>
+
+    <div id="date">
+      <!-- Date -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Data da Live</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="liveDate" name="liveDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+         <!--Time-->
+         <mat-form-field class="example-full-width" id="separar">
+          <mat-label>Hora da Live</mat-label>
+          <input matInput formControlName="liveTime" name="liveTime" type="time" #time>
+        </mat-form-field>
+
+    </div>
+    <div id="time">
+   
+    </div>
   </form>
 </div>
 <div mat-dialog-actions>

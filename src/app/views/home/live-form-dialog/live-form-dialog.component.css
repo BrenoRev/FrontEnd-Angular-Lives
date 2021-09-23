@@ -6,3 +6,24 @@
 .example-full-width{
     width: 100%;
 }
+
+#date{
+width: 50%;
+display: flex;
+padding-left: 20px;
+}
+
+#separar{
+    padding-left: 50px;
+}
+
+@media (max-width: 600px){
+    #date{
+    width: 100%;
+    display: inline-block;
+    padding: 0px;
+    }
+    #separar{
+        padding: 0;
+    }
+}
