@@ -38,7 +38,7 @@ import { LiveListComponent } from './home/live-list/live-list.component';
 
     ],
   providers: [
-    LocalDateTimePipe
+    LocalDateTimePipe,
   ]
 })
 export class LivesModule { }

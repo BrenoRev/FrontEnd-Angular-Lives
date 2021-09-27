@@ -16,20 +16,31 @@ Back-End com Java:  https://github.com/BrenoRev/API-Lives
   
 # Lives Realizadas
   
- ![Realizadas](https://user-images.githubusercontent.com/84048306/134834110-e202d120-6694-48c0-a48b-389c3e00e39e.png)
+![3](https://user-images.githubusercontent.com/84048306/134934115-8d678daf-c01d-4264-be93-83eab279e9ea.png)
+
 
 
   
 # Proximas Lives
   
-![Proximas](https://user-images.githubusercontent.com/84048306/134834118-fc1169b9-c664-402f-b757-13182f13a84c.png)
+
+![5](https://user-images.githubusercontent.com/84048306/134934144-b9475de6-2db8-4ce4-becb-5813e4e94f46.png)
 
   
   
 # Cadastro de Lives
   
-![NovaLive](https://user-images.githubusercontent.com/84048306/134834121-cc5e321e-ffd6-4521-a532-b9de56972765.png)
 
+![4](https://user-images.githubusercontent.com/84048306/134934173-2a9726cb-6107-4e57-8e06-f78b949b976e.png)
 
+  # Deletar Lives
+  
+  ![1](https://user-images.githubusercontent.com/84048306/134934243-efc9f3a8-73f9-4715-9b78-378d0edc6e30.png)
+
+  
+  # Atualizar Lives
+  
+![2](https://user-images.githubusercontent.com/84048306/134934290-42a59c50-eb8f-4f93-985d-ab50d281960b.png)
+ 
 
   </details>

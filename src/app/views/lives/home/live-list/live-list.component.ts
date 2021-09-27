@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Live } from 'src/app/shared/model/live.model';
 import { LiveService } from 'src/app/shared/service/live.service';
+import { HomeComponent } from '../home.component';
+import { LiveFormDialogComponent } from '../live-form-dialog/live-form-dialog.component';
 
 @Component({
   selector: 'app-live-list',
@@ -15,14 +17,17 @@ export class LiveListComponent implements OnInit {
   livesNext: Live[] = [];
   next: boolean = false;
   previous: boolean = false;
-
+ 
   constructor(public liveService: LiveService,
-              public sanitizer: DomSanitizer) { }
+              public sanitizer: DomSanitizer,
+              public add: HomeComponent,
+              ) { }
 
   ngOnInit(): void {
+    this.sendId(0);
     this.getLives();
   }
-
+  
   // Vai pegar todas as lives
   getLives(){
     this.liveService.getLivesWithFlag('previous').subscribe((data) => {
@@ -38,10 +43,22 @@ export class LiveListComponent implements OnInit {
       this.livesNext.forEach(live => {
         live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
       })
-      this.next = true;
+      this.next = true; 
     })
+    this.sendId(0);
   }
   
+  deleteLive(id: Number){
+    if(confirm("Deseja confirmar a exclusão da live?")){
+    this.liveService.deleteLives(id).subscribe();
+    window.location.reload();
+    this.sendId(0);
+    this.getLives();
+  }
+  }
   
-  
+  sendId(id: Number){
+    LiveFormDialogComponent.id = id;
+  }
+
 }

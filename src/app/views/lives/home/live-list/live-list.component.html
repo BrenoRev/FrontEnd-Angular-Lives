@@ -10,7 +10,7 @@
                     <div class="row">
                       <p>
                         <span id="font">{{live.liveName}}</span>
-                        <span ></span>
+                        <span></span>
                         <span id="font" class="float cor">{{live.liveDate | localDateTime}}</span>
                       </p>
                       <p id="font">
@@ -21,6 +21,8 @@
                     <div>
                       <iframe id="frame" width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                    </div>
+                   <button id="font" class="float" style="color:red" (click)="deleteLive(live.id)"><mat-icon>remove</mat-icon>Remover</button>
+                   <button id="font" class="float" style="color:blue"  (click)="sendId(live.id)" (click)="add.addLive()"><mat-icon>all_out</mat-icon>Alterar</button>
                 </mat-card>
               </ng-container>
       </div>
@@ -39,7 +41,7 @@
             <div class="row">
               <p>
                 <span id="font">{{live.liveName}}</span>
-                <span></span>
+               <span></span>
                 <span id="font" class="float cor">{{live.liveDate | localDateTime}}</span>
               </p>
               <p id="font">
@@ -50,6 +52,8 @@
               <mat-card-content>
                 <div>
                   <iframe id="frame" width="560" height="315" [src]="live.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <button id="font" class="float" style="color:red" (click)="deleteLive(live.id)"><mat-icon>remove</mat-icon>Remover</button>
+                  <button id="font" class="float" style="color:blue"  (click)="sendId(live.id)" (click)="add.addLive()"><mat-icon>all_out</mat-icon>Alterar</button>
                </div>
               </mat-card-content>
             </mat-card>

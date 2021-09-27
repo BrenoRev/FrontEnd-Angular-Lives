@@ -10,7 +10,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 export class LiveService {
 
   // URL da api que vai acessar
-  apiUrl = 'http://api-lives-angular.herokuapp.com/lives';
+  apiUrl = 'https://api-lives-angular.herokuapp.com/lives';
 
   // Declarando que é uma resposta do tipo json
   httpOptions = {
@@ -27,8 +27,17 @@ export class LiveService {
   public getLivesWithFlag(flag: string): Observable<ResponsePageable>{
       return this.httpClient.get<ResponsePageable>(this.apiUrl + '?flag=' + flag);
   }
+  // Cria uma nova live pelo método post
   public postLives(live: any): Observable<Live> {
     return this.httpClient.post<any>(this.apiUrl, live, this.httpOptions);
 }
-  
+ // Delete
+    public deleteLives(id: Number): Observable<any>{
+      return this.httpClient.delete<any>(this.apiUrl + "/" + id);
+    }
+
+ // Put
+  public updateLives(id:Number, live: Live): Observable<any>{
+    return this.httpClient.put<any>(this.apiUrl + "/" + id, live);
+  }
 }
