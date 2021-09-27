@@ -1,27 +1,35 @@
-# Agendalive
+# Front End Angular SPA / API Rest de Cadastro de Lives
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+Back-End com Java:  https://github.com/BrenoRev/API-Lives
+ <p>Ferramentas utilizadas</p>
+        <ul>
+  <li>Angular</li>
+  <li>TypeScript</li>
+  <li>Angular Material</li>
+        </ul>
+        ﾠ
+        <h3> Link para acessar: http://angular-lives-spa.herokuapp.com/lives </h3>
+        <br>
+        <details>
+    <br>
+    <summary><b>IMAGENS DO PROJETO, CLIQUE AQUI PARA VER </b></summary>
+  
+# Lives Realizadas
+  
+ ![Realizadas](https://user-images.githubusercontent.com/84048306/134834110-e202d120-6694-48c0-a48b-389c3e00e39e.png)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  
+# Proximas Lives
+  
+![Proximas](https://user-images.githubusercontent.com/84048306/134834118-fc1169b9-c664-402f-b757-13182f13a84c.png)
 
-## Code scaffolding
+  
+  
+# Cadastro de Lives
+  
+![NovaLive](https://user-images.githubusercontent.com/84048306/134834121-cc5e321e-ffd6-4521-a532-b9de56972765.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  </details>
